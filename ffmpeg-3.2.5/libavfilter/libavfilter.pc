@@ -1,0 +1,14 @@
+prefix=/home/huyu/huyu/ffmpeg-3.2.5/../out/ffmpeg
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 6.65.100
+Requires: 
+Requires.private: libswscale >= 4.2.100, libpostproc >= 54.1.100, libswresample >= 2.3.100, libavformat >= 57.56.101, libavcodec >= 57.64.101, libavutil >= 55.34.101
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -L/home/huyu/huyu/libx264-20180614-2245/../out/lib -lx264 -lm -ldl -lmp3lame -L/home/huyu/huyu/fribidi-1.0.2/../out/lib -lfribidi -L/home/huyu/huyu/freetype-2.6.5/../out/lib -lfreetype -L/home/huyu/huyu/fontconfig-2.12.6/../out/lib -L/home/huyu/huyu/freetype-2.6.5/../out/lib -lfontconfig -lfreetype -L/home/huyu/huyu/libfdk-aac-0.1.6/../out/lib -lfdk-aac -L/home/huyu/huyu/libass-0.13.0/../out/lib -lass -lm -lz -pthread -lm -lgcc
+Cflags: -I${includedir}
